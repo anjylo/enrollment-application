@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  node:
+    image: 'express_image'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: express_container
+    volumes:
+      - ./:/projects/note-application
+      - /projects/note-application/node_modules
+    ports:
+      - 3000:3000
+    networks:
+      - note-application
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo_container
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo_data_container:/data/db
+    networks:
+      - note-application
+
+networks:
+  note-application:
+    driver: bridge
+
+volumes:
+  mongo_data_container:
