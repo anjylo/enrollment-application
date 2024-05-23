@@ -120,7 +120,7 @@ app.delete('/users/:id', async (request, response) => {
     }
 });
 
-app.use((request, response) => response.status(404).json({error: '404. Page Not Found.'}));
+app.use((request, response) => response.status(404).json({message: '404. Page Not Found.'}));
 
 database.connect((error) => {
     if (! error) {
