@@ -1,1 +1,1 @@
-Note application
+Enrollment application

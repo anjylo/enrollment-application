@@ -1,6 +1,6 @@
 FROM node:18-alpine
 
-WORKDIR /projects/note-application
+WORKDIR /projects/enrollment-application
 
 COPY . .
 

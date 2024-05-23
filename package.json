@@ -1,7 +1,7 @@
 {
-  "name": "note-application",
+  "name": "Enrollment application",
   "version": "1.0.0",
-  "description": "Note application",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon ./src/app"

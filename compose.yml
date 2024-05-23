@@ -8,12 +8,12 @@ services:
       dockerfile: Dockerfile
     container_name: express_container
     volumes:
-      - ./:/projects/note-application
-      - /projects/note-application/node_modules
+      - ./:/projects/enrollment-application
+      - /projects/enrollment-application/node_modules
     ports:
       - 3000:3000
     networks:
-      - note-application
+      - enrollment-application
 
   mongo:
     image: mongo:latest
@@ -23,10 +23,10 @@ services:
     volumes:
       - mongo_data_container:/data/db
     networks:
-      - note-application
+      - enrollment-application
 
 networks:
-  note-application:
+  enrollment-application:
     driver: bridge
 
 volumes:
