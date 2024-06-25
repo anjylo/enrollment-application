@@ -1,1 +1,1 @@
-Enrollment application
+Basic Node.js project
